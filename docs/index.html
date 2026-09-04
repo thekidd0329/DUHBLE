@@ -1,1 +1,299 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07080b"><title>NeuroSyn Labs · DUHBLE</title><meta name="description" content="NeuroSyn Labs is building and testing DUHBLE, an experimental stateful software architecture."><link rel="stylesheet" href="site.css"></head><body><header><div class="wrap nav"><a class="brand" href="index.html"><img src="assets/neurosyn-logo.png" alt="NeuroSyn Labs"></a><nav class="navlinks"><a href="index.html">Home</a><a href="about.html">What We're Building</a><a href="implementations.html">Implementations</a><a href="progress.html">Progress</a><a class="nav-cta" href="contact.html">Contact</a></nav></div></header><main><section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow"><span class="dot"></span>Work in progress · duh.bet</div><h1>Software that <span class="accent">remembers</span> what matters.</h1><p class="lede">NeuroSyn Labs is exploring a different kind of software architecture: stateful, adaptive systems built around explicit memory, provenance, topology, and lawful change. The work is early. The claims are being tested. The interesting part is that the pieces are starting to move.</p><div class="actions"><a class="btn primary" href="about.html">What we're building</a><a class="btn" href="progress.html">See current progress</a></div></div><div class="hero-card"><div class="hero-logo"><img src="assets/neurosyn-logo.png" alt="NeuroSyn Labs logo"></div><div class="mini-grid"><div class="mini"><strong>DUHBLE</strong><span>Stateful execution + memory research</span></div><div class="mini"><strong>.duh</strong><span>Portable model format under development</span></div><div class="mini"><strong>Local-first</strong><span>Designed to keep state close to the system</span></div><div class="mini"><strong>Proof-driven</strong><span>Claims follow tests, not the other way around</span></div></div></div></div></section><section><div class="wrap"><div class="sectionhead"><div class="kicker">The premise</div><h2>What if software did not need to fake continuity?</h2><p>Most software treats memory as something bolted on later: a database, cache, prompt history, or vector store. NeuroSyn is investigating systems where state, conduction, and change are part of the model itself.</p></div><div class="grid3"><article class="card"><h3>State belongs somewhere real</h3><p>Persistent behavior should come from mounted state, not from a second hidden source of truth.</p></article><article class="card"><h3>Change should have a cause</h3><p>Updates should be traceable to an allowed source, path, and event instead of ambient authority.</p></article><article class="card"><h3>Tests should be able to kill the idea</h3><p>We are actively looking for failure modes, contradictions, and architecture that cheats.</p></article></div></div></section><section><div class="wrap notice"><div class="status"><span class="dot"></span>Research / prototype stage</div><h2 style="margin-top:18px">This is not a finished product.</h2><p class="lede">NeuroSyn and DUHBLE are under active development. Interfaces, terminology, architecture, performance characteristics, and implementation details may change as testing continues.</p></div></section><section><div class="wrap"><div class="sectionhead"><div class="kicker">Where it could go</div><h2>Possible implementations</h2><p>The architecture is being explored as a substrate, not as one single app.</p></div><div class="grid3"><article class="card"><h3>Adaptive game characters</h3><p>Characters whose relationship state can persist, decay, reinforce, and respond to prior interaction.</p></article><article class="card"><h3>Local assistants</h3><p>Device-resident systems that can preserve meaningful state without giant remote context windows.</p></article><article class="card"><h3>Interactive simulations</h3><p>Controlled systems for testing emergence, provenance, topology, timing, and state transitions.</p></article></div><div class="actions"><a class="btn" href="implementations.html">Explore implementations →</a></div></div></section></main><footer><div class="wrap footer-row"><span>© 2026 NeuroSyn Labs. Work in progress.</span><span>duh.bet · Built in public, one proof at a time.</span></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07020d">
+  <title>NeuroSyn Labs · DUHBLE</title>
+  <meta name="description" content="NeuroSyn Labs is building DUHBLE: a new stateful foundation for software, AI, games, tutoring, autonomous systems, scientific instruments, and persistent machine memory.">
+  <link rel="stylesheet" href="site.css">
+</head>
+<body class="home">
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="matrix-fade" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="NeuroSyn Labs home">
+        <img src="assets/neurosyn-logo.png" alt="NeuroSyn Labs">
+      </a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="#duhble">DUHBLE</a>
+        <a href="#applications">Applications</a>
+        <a href="#build">Build With Us</a>
+        <a class="nav-cta" href="#donate">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero mega-hero">
+      <div class="wrap hero-shell reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span>NEUROSYN LABS · DUHBLE</div>
+        <h1>For 50 years, computers have basically done the <span class="accent glow-word">same damn thing.</span></h1>
+        <p class="hero-hit">More storage. More databases. More compute. Better guessing.</p>
+        <p class="lede hero-lede">We’re changing the foundation underneath software itself. DUHBLE gives machines persistent state, causal memory, provenance, relationships, decay, reinforcement, and continuity as part of the running system, instead of bolting memory on afterward and pretending that lookup is understanding.</p>
+        <div class="actions">
+          <a class="btn primary" href="#duhble">Meet DUHBLE</a>
+          <a class="btn" href="#applications">See What It Changes</a>
+          <a class="btn ghost" href="https://github.com/thekidd0329/DUHBLE" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="terminal-strip" aria-label="DUHBLE principles">
+          <span>MEMORY HAS CAUSE</span>
+          <span>STATE HAS OWNERSHIP</span>
+          <span>RELATIONSHIPS HAVE WEIGHT</span>
+          <span>CHANGE LEAVES A TRACE</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="duhble" class="section-space">
+      <div class="wrap split reveal">
+        <div>
+          <div class="kicker">DUHBLE</div>
+          <h2>Memory should be part of the machine, not a pile beside it.</h2>
+        </div>
+        <div class="big-copy">
+          <p>DUHBLE is a stateful software substrate that can sit underneath an application, game, agent, language model, robot, simulation, scientific instrument, or distributed system.</p>
+          <p>Instead of asking a database what happened, DUHBLE carries the consequences of what happened. Information can strengthen, weaken, decay, collide, persist, conduct, and change future behavior because of its history.</p>
+          <p class="manifesto-line">If a system cannot trace why it knows something, DUHBLE does not treat that knowledge as real.</p>
+        </div>
+      </div>
+
+      <div class="wrap principle-grid reveal">
+        <article class="glass-card">
+          <span class="card-index">01</span>
+          <h3>Cause becomes memory.</h3>
+          <p>An event is not remembered because somebody shoved a row into storage. It becomes memory because a lawful event changed the mounted state.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-index">02</span>
+          <h3>Relationships become computation.</h3>
+          <p>Trust, hostility, association, eligibility, affinity, reinforcement, inhibition, and decay can live in the system itself and shape what happens next.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-index">03</span>
+          <h3>Continuity stops being theater.</h3>
+          <p>A machine can leave, return, reconnect, move between hosts, and continue from owned state without rebuilding its identity from a giant conversation transcript.</p>
+        </article>
+        <article class="glass-card">
+          <span class="card-index">04</span>
+          <h3>Provenance becomes law.</h3>
+          <p>The host does not get to invent why something changed. Source, path, timing, eligibility, and state determine whether change is allowed to become part of the machine.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="llm-section section-space">
+      <div class="wrap feature-panel reveal">
+        <div class="feature-copy">
+          <div class="kicker">ADD IT TO AI</div>
+          <h2>Give LMs and LLMs something they were never built with: durable internal continuity.</h2>
+          <p>Let the language model generate language. Let DUHBLE carry the state underneath it.</p>
+          <p>An LLM can plug into DUHBLE as a reasoning or language surface while DUHBLE remembers relationships, prior causes, learned associations, persistent state, permissions, and what actually changed over time.</p>
+          <p class="manifesto-line">Stop spending the whole context window reminding the machine who it was five minutes ago.</p>
+        </div>
+        <div class="stack-diagram" aria-label="LLM and DUHBLE architecture concept">
+          <div class="stack-box top-box">LLM / LM<div>language · reasoning · generation</div></div>
+          <div class="stack-arrow">⇅</div>
+          <div class="stack-box core-box">DUHBLE<div>state · memory · provenance · topology · continuity</div></div>
+          <div class="stack-arrow">⇅</div>
+          <div class="stack-box">APP / GAME / ROBOT / DEVICE / INSTRUMENT</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="applications" class="section-space">
+      <div class="wrap sectionhead reveal">
+        <div class="kicker">WHAT THIS UNLOCKS</div>
+        <h2>One substrate. A stupid number of possible machines.</h2>
+        <p>DUHBLE is not one app. It is the layer underneath whatever needs to remember, adapt, carry consequences, and remain itself over time.</p>
+      </div>
+
+      <div class="wrap app-grid">
+        <article class="use-card reveal">
+          <div class="use-icon">◈</div>
+          <h3>Persistent NPCs</h3>
+          <p>Characters that remember betrayal, kindness, fear, alliances, grudges, debts, reputation, and repeated behavior. Leave the city. Come back later. The relationship is still there because the world actually carried it.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">⌁</div>
+          <h3>Personal Tutoring</h3>
+          <p>A tutor that remembers how a student learns, where confusion keeps appearing, what finally made a concept click, which skills are weakening, and what should be reinforced next.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">✦</div>
+          <h3>Space Telescopes & Scientific Instruments</h3>
+          <p>An instrument can carry the history of observations, anomalies, calibration changes, correlations, and prior conditions across a mission instead of treating every new reading like an isolated event.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">λ</div>
+          <h3>LLM Memory Layer</h3>
+          <p>Attach DUHBLE beneath an LM or LLM to provide persistent state and causal memory without forcing the model to repeatedly ingest its own life story as prompt context.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">◎</div>
+          <h3>Local Assistants</h3>
+          <p>Device-resident assistants that preserve meaningful state locally, remember preferences and relationships, and continue across sessions without making a remote transcript the brain.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">⬡</div>
+          <h3>Robotics & Autonomous Systems</h3>
+          <p>Machines that carry operational history, learned associations, environmental consequences, and trusted causal state forward instead of resetting cognition at every task boundary.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">∞</div>
+          <h3>Living Simulations</h3>
+          <p>Simulated systems where history matters. Agents, economies, ecosystems, societies, traffic, strategy worlds, and digital twins can develop state that comes from what actually occurred.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">⚡</div>
+          <h3>Adaptive Cybersecurity</h3>
+          <p>Security systems that remember causal attack patterns, trust changes, defensive responses, repeated behavior, and system history as state rather than isolated alerts in a log pile.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">◌</div>
+          <h3>Persistent Game Worlds</h3>
+          <p>Not just NPC memory. Factions, locations, economies, quests, ecosystems, and entire worlds can carry consequences forward without scripting every possible branch by hand.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">⇄</div>
+          <h3>Cross-Host State</h3>
+          <p>Move the mounted model between processes, devices, engines, or hosts while preserving the semantic state itself. The application becomes the interface, not the owner of memory.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">⌂</div>
+          <h3>Smart Environments</h3>
+          <p>Homes, vehicles, classrooms, tools, and workplaces that accumulate meaningful state from interaction instead of operating as disconnected automations with no memory of why anything matters.</p>
+        </article>
+        <article class="use-card reveal">
+          <div class="use-icon">◇</div>
+          <h3>Agents That Actually Continue</h3>
+          <p>Software agents that do not need to fake persistence through endless summaries. Tasks, relationships, consequences, learned pathways, and changing state can survive beyond one inference call.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement-section section-space">
+      <div class="wrap statement reveal">
+        <div class="kicker">THE BET</div>
+        <h2>We’re not making better software.</h2>
+        <h2 class="accent giant-line">We’re changing what software is.</h2>
+        <p>Software has spent decades remembering by looking things up. DUHBLE remembers by being changed by what happened.</p>
+      </div>
+    </section>
+
+    <section id="build" class="section-space">
+      <div class="wrap build-panel reveal">
+        <div>
+          <div class="kicker">BUILD WITH US</div>
+          <h2>Help build the weird thing before it has a textbook.</h2>
+          <p class="lede">NeuroSyn Labs is recruiting college students who want to work directly on DUHBLE, its runtime, testing, implementations, integrations, and the systems around it.</p>
+          <p class="build-emphasis">We especially need <strong>red-team and blue-team expertise</strong>. Break assumptions. Find attack surfaces. Defend the model boundary. Prove the architecture can survive hostile thinking.</p>
+          <div class="skill-cloud" aria-label="Areas of interest">
+            <span>RED TEAM</span><span>BLUE TEAM</span><span>SYSTEMS</span><span>RUNTIMES</span><span>LLMs</span><span>GAME DEV</span><span>UNREAL</span><span>SECURITY</span><span>COMPILERS</span><span>SIMULATION</span><span>RESEARCH</span>
+          </div>
+          <div class="actions">
+            <a class="btn primary" href="mailto:?subject=Build%20with%20NeuroSyn%20Labs&body=I%27m%20interested%20in%20building%20with%20NeuroSyn%20Labs.%0D%0A%0D%0AName%3A%0D%0ASchool%20%2F%20program%3A%0D%0AArea%20of%20expertise%3A%0D%0ARed%20team%20%2F%20blue%20team%20%2F%20systems%20%2F%20ML%20%2F%20game%20dev%20%2F%20other%3A%0D%0AWhat%20I%20want%20to%20help%20build%3A%0D%0A">Build With Us</a>
+            <a class="btn" href="https://github.com/thekidd0329/DUHBLE" target="_blank" rel="noopener">Explore the Repo ↗</a>
+          </div>
+        </div>
+        <div class="recruit-terminal" aria-hidden="true">
+          <div class="terminal-title"><span></span><span></span><span></span> recruitment.duh</div>
+          <pre>&gt; SEEKING: COLLEGE BUILDERS
+&gt; PRIORITY: RED_TEAM / BLUE_TEAM
+&gt; TARGET: MODEL BOUNDARY
+&gt; STATUS: OPEN
+
+&gt; THINK ADVERSARIALLY
+&gt; BUILD DEFENSIVELY
+&gt; QUESTION EVERYTHING
+&gt; SHIP WHAT SURVIVES</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="section-space donate-section">
+      <div class="wrap donate-panel reveal">
+        <div>
+          <div class="kicker">BACK THE BUILD</div>
+          <h2>Want to put fuel behind NeuroSyn Labs?</h2>
+          <p>Help fund compute, hardware, testing, hosting, research infrastructure, development tools, filings, and the people willing to spend their nights finding out how far this can go.</p>
+        </div>
+        <a class="btn donate-btn" href="mailto:?subject=I%27m%20interested%20in%20donating%20to%20NeuroSyn%20Labs&body=Hi%20NeuroSyn%20Labs%2C%0D%0A%0D%0AI%27m%20interested%20in%20donating%20to%20support%20DUHBLE%20and%20NeuroSyn%20Labs.%0D%0A%0D%0AName%3A%0D%0ABest%20way%20to%20reach%20me%3A%0D%0AAnything%20you%27d%20like%20us%20to%20know%3A%0D%0A">I’m Interested in Donating</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© 2026 NeuroSyn Labs.</span>
+      <span>DUHBLE · ONE MACHINE. ONE SEMANTIC TRUTH.</span>
+      <a href="https://github.com/thekidd0329/DUHBLE" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const canvas = document.getElementById('matrix');
+      const ctx = canvas.getContext('2d');
+      const glyphs = '01#<>[]{}λφΔ∴::DUHBLE';
+      let width = 0;
+      let height = 0;
+      let columns = 0;
+      let drops = [];
+      const fontSize = 15;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        columns = Math.ceil(width / fontSize);
+        drops = Array.from({ length: columns }, () => Math.random() * -60);
+      }
+
+      function frame() {
+        ctx.fillStyle = 'rgba(5, 1, 10, 0.105)';
+        ctx.fillRect(0, 0, width, height);
+        ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
+        for (let i = 0; i < drops.length; i++) {
+          const ch = glyphs[Math.floor(Math.random() * glyphs.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+          const alpha = 0.25 + Math.random() * 0.5;
+          ctx.fillStyle = `rgba(184, 103, 255, ${alpha})`;
+          ctx.fillText(ch, x, y);
+          if (y > height && Math.random() > 0.975) drops[i] = Math.random() * -20;
+          drops[i] += 0.62 + Math.random() * 0.34;
+        }
+        requestAnimationFrame(frame);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      if (!reduceMotion) frame();
+
+      const reveals = document.querySelectorAll('.reveal');
+      if (reduceMotion) {
+        reveals.forEach(el => el.classList.add('visible'));
+      } else {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+      }
+    })();
+  </script>
+</body>
+</html>
