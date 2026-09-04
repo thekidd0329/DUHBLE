@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 500" role="img" aria-labelledby="title desc">
+  <title id="title">NeuroSyn Labs</title>
+  <desc id="desc">NeuroSyn Labs network mark and wordmark</desc>
+  <g fill="none" stroke="#8f86e8" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M54 68 L364 44 L200 235 Z"/>
+    <path d="M200 235 L54 402 L364 447 Z"/>
+  </g>
+  <g>
+    <circle cx="54" cy="68" r="30" fill="#20a67c"/>
+    <circle cx="364" cy="44" r="30" fill="#766de1"/>
+    <circle cx="200" cy="235" r="48" fill="#766de1"/>
+    <circle cx="54" cy="402" r="30" fill="#766de1"/>
+    <circle cx="364" cy="447" r="30" fill="#20a67c"/>
+  </g>
+  <text x="515" y="280" fill="#251f64" font-family="Arial, Helvetica, sans-serif" font-size="160" font-weight="400" letter-spacing="-4">NeuroSyn</text>
+  <text x="515" y="395" fill="#138d76" font-family="Arial, Helvetica, sans-serif" font-size="76" font-weight="500" letter-spacing="28">LABS</text>
+</svg>
