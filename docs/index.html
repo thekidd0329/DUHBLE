@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#07020d">
   <title>NeuroSyn Labs · DUHBLE</title>
-  <meta name="description" content="DUHBLE is a new compute model centered on state, relationships, provenance, and the conditions under which computation becomes necessary.">
+  <meta name="description" content="NeuroSyn Labs is building DUHBLE: a new stateful foundation for software, AI, games, tutoring, autonomous systems, scientific instruments, and persistent machine memory.">
   <link rel="stylesheet" href="site.css">
 </head>
 <body class="home">
@@ -14,28 +14,36 @@
 
   <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="NeuroSyn Labs home"><img src="assets/neurosyn-logo.png" alt="NeuroSyn Labs"></a>
+      <a class="brand" href="index.html" aria-label="NeuroSyn Labs home">
+        <img src="assets/neurosyn-logo.png" alt="NeuroSyn Labs">
+      </a>
       <nav class="navlinks" aria-label="Primary navigation">
         <a href="about.html">DUHBLE</a>
         <a href="implementations.html">Applications</a>
         <a href="progress.html">Progress</a>
-        <a href="build.html">Build</a>
-        <a class="nav-cta" href="support.html">Support</a>
+        <a href="build.html">Build With Us</a>
+        <a class="nav-cta" href="support.html">Donate</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero mega-hero compact-hero">
+  <main id="top">
+    <section class="hero mega-hero">
       <div class="wrap hero-shell reveal">
         <div class="eyebrow"><span class="pulse-dot"></span>NEUROSYN LABS · DUHBLE</div>
         <h1>For 50 years, computers have basically done the <span class="accent glow-word">same damn thing.</span></h1>
         <p class="hero-hit">More storage. More databases. More compute. Better guessing.</p>
-        <p class="lede hero-lede">DUHBLE changes the abstraction underneath software itself: state, relationships, provenance, continuity, and lawful change become native parts of the running system.</p>
+        <p class="lede hero-lede">We’re changing the foundation underneath software itself. DUHBLE gives machines persistent state, causal memory, provenance, relationships, decay, reinforcement, and continuity as part of the running system, instead of bolting memory on afterward and pretending that lookup is understanding.</p>
         <div class="actions">
           <a class="btn primary" href="about.html">Meet DUHBLE</a>
           <a class="btn" href="implementations.html">See What It Changes</a>
           <a class="btn ghost" href="https://github.com/thekidd0329/DUHBLE" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+        <div class="terminal-strip" aria-label="DUHBLE principles">
+          <span>MEMORY HAS CAUSE</span>
+          <span>STATE HAS OWNERSHIP</span>
+          <span>RELATIONSHIPS HAVE WEIGHT</span>
+          <span>CHANGE LEAVES A TRACE</span>
         </div>
       </div>
     </section>
@@ -46,28 +54,22 @@
       </div>
     </section>
 
-    <section class="page-directory">
-      <div class="wrap">
-        <div class="sectionhead reveal">
-          <div class="kicker">EXPLORE THE SYSTEM</div>
-          <h2>No endless landing-page scroll.</h2>
-          <p>Each part of the project now has its own page: the architecture, possible implementations, current progress, ways to build with us, and ways to support the work.</p>
-        </div>
-        <div class="page-grid">
-          <a class="page-link reveal" href="about.html"><div><div class="kicker">01 · DUHBLE</div><h3>The compute model</h3><p>State, relationships, provenance, continuity, conduction, and why DUHBLE is not just another programming language.</p></div><span class="arrow">→</span></a>
-          <a class="page-link reveal" href="implementations.html"><div><div class="kicker">02 · APPLICATIONS</div><h3>What it could change</h3><p>LLMs, games, tutoring, robotics, simulations, scientific instruments, local assistants, security, and more.</p></div><span class="arrow">→</span></a>
-          <a class="page-link reveal" href="progress.html"><div><div class="kicker">03 · PROGRESS</div><h3>What exists right now</h3><p>Prototype status, hardening work, current boundaries, and the next technical milestones.</p></div><span class="arrow">→</span></a>
-          <a class="page-link reveal" href="build.html"><div><div class="kicker">04 · BUILD</div><h3>Build with us</h3><p>Systems, runtimes, compilers, security, red team, blue team, LLM integrations, simulation, and game development.</p></div><span class="arrow">→</span></a>
-          <a class="page-link reveal" href="support.html"><div><div class="kicker">05 · SUPPORT</div><h3>Back the build</h3><p>Help fund compute, hardware, testing, hosting, research infrastructure, tools, and filings.</p></div><span class="arrow">→</span></a>
-          <a class="page-link reveal" href="contact.html"><div><div class="kicker">06 · CONTACT</div><h3>Bring us something impossible</h3><p>Research, integrations, collaboration, recruiting, support, or direct project contact.</p></div><span class="arrow">→</span></a>
-        </div>
+    <section class="statement-section section-space">
+      <div class="wrap statement reveal">
+        <div class="kicker">THE BET</div>
+        <h2>We’re not making better software.</h2>
+        <h2 class="accent giant-line">We’re changing what software is.</h2>
+        <p>Software has spent decades remembering by looking things up. DUHBLE remembers by being changed by what happened.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap footer-row">
-      <span>© 2026 NeuroSyn Labs.</span><hr><span>DUHBLE · ONE MACHINE. ONE SEMANTIC TRUTH.</span><a href="mailto:get@duh.bet">get@duh.bet</a>
+      <span>© 2026 NeuroSyn Labs.</span>
+      <hr>
+      <span>DUHBLE · ONE MACHINE. ONE SEMANTIC TRUTH.</span>
+      <a href="mailto:get@duh.bet">get@duh.bet</a>
     </div>
   </footer>
 
@@ -76,13 +78,61 @@
       const canvas = document.getElementById('matrix');
       const ctx = canvas.getContext('2d');
       const glyphs = '01#<>[]{}λφΔ∴::DUHBLE';
-      let width = 0, height = 0, columns = 0, drops = [];
+      let width = 0;
+      let height = 0;
+      let columns = 0;
+      let drops = [];
       const fontSize = 15;
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      function resize(){const dpr=Math.min(window.devicePixelRatio||1,2);width=window.innerWidth;height=window.innerHeight;canvas.width=width*dpr;canvas.height=height*dpr;canvas.style.width=width+'px';canvas.style.height=height+'px';ctx.setTransform(dpr,0,0,dpr,0,0);columns=Math.ceil(width/fontSize);drops=Array.from({length:columns},()=>Math.random()*-60)}
-      function frame(){ctx.fillStyle='rgba(5,1,10,0.105)';ctx.fillRect(0,0,width,height);ctx.font=`${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;for(let i=0;i<drops.length;i++){const ch=glyphs[Math.floor(Math.random()*glyphs.length)],x=i*fontSize,y=drops[i]*fontSize,alpha=.25+Math.random()*.5;ctx.fillStyle=`rgba(184, 103, 255, ${alpha})`;ctx.fillText(ch,x,y);if(y>height&&Math.random()>.975)drops[i]=Math.random()*-20;drops[i]+=.62+Math.random()*.34}requestAnimationFrame(frame)}
-      resize();window.addEventListener('resize',resize);if(!reduceMotion)frame();
-      const reveals=document.querySelectorAll('.reveal');if(reduceMotion){reveals.forEach(el=>el.classList.add('visible'))}else{const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});reveals.forEach(el=>observer.observe(el))}
+
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+        canvas.style.width = width + 'px';
+        canvas.style.height = height + 'px';
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        columns = Math.ceil(width / fontSize);
+        drops = Array.from({ length: columns }, () => Math.random() * -60);
+      }
+
+      function frame() {
+        ctx.fillStyle = 'rgba(5, 1, 10, 0.105)';
+        ctx.fillRect(0, 0, width, height);
+        ctx.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
+        for (let i = 0; i < drops.length; i++) {
+          const ch = glyphs[Math.floor(Math.random() * glyphs.length)];
+          const x = i * fontSize;
+          const y = drops[i] * fontSize;
+          const alpha = 0.25 + Math.random() * 0.5;
+          ctx.fillStyle = `rgba(184, 103, 255, ${alpha})`;
+          ctx.fillText(ch, x, y);
+          if (y > height && Math.random() > 0.975) drops[i] = Math.random() * -20;
+          drops[i] += 0.62 + Math.random() * 0.34;
+        }
+        requestAnimationFrame(frame);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+      if (!reduceMotion) frame();
+
+      const reveals = document.querySelectorAll('.reveal');
+      if (reduceMotion) {
+        reveals.forEach(el => el.classList.add('visible'));
+      } else {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        reveals.forEach(el => observer.observe(el));
+      }
     })();
   </script>
 </body>
