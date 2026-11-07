@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Listen to Parker Pierce on Spotify. A music project from the creator of DUHBLE and NeuroSyn Labs.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Parker Pierce | Music · NeuroSyn Labs">
+  <meta property="og:description" content="One builder. Two worlds. Explore Parker Pierce's music through official Spotify players.">
+  <title>Parker Pierce · Music | NeuroSyn Labs</title>
+  <style>
+    :root { color-scheme: dark; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; --bg: #080b12; --panel: #111725; --text: #f3f5fa; --muted: #a8b3c5; --line: #344158; --accent: #94c6ff; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--text); background: radial-gradient(ellipse 55% 28% at 87% 6%, #2647764f, transparent 85%), radial-gradient(ellipse 45% 32% at 0 50%, #222b5540, transparent 82%), var(--bg); min-height: 100vh; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .topbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; padding: 28px 0; border-bottom: 1px solid #ffffff22; }
+    .brand { font-size: 0.82rem; letter-spacing: .12em; font-weight: 780; text-transform: uppercase; text-decoration: none; }
+    .brand span { color: var(--muted); font-weight: 500; }
+    .nav { display: flex; flex-wrap: wrap; gap: 12px; }
+    .nav a, .button { display: inline-flex; align-items: center; justify-content: center; padding: 12px 17px; border: 1px solid var(--line); border-radius: 999px; font-size: .9rem; font-weight: 650; text-decoration: none; transition: background .2s, border-color .2s, transform .2s; }
+    .nav a:hover, .button:hover { background: #ffffff14; border-color: #a1bad9; transform: translateY(-1px); }
+    .hero { padding: clamp(58px, 10vw, 126px) 0 56px; max-width: 860px; }
+    .eyebrow { display: inline-block; color: var(--accent); font-size: .75rem; font-weight: 760; letter-spacing: .23em; text-transform: uppercase; margin-bottom: 24px; }
+    h1 { font-size: clamp(3.8rem, 11vw, 9rem); line-height: .91; letter-spacing: -.082em; margin: 0 0 26px; }
+    h1 em { font-style: normal; background: linear-gradient(125deg, #ffffff, #84b5fa 68%, #a5adf8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lede { font-size: clamp(1.1rem, 2.25vw, 1.35rem); line-height: 1.65; color: #c4d0df; max-width: 680px; margin: 0 0 30px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button.primary { background: #f2f6ff; color: #0b1220; border-color: #f2f6ff; }
+    .button.primary:hover { background: #cbdefe; }
+    .section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+    h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.55rem); letter-spacing: -.05em; }
+    .muted { color: var(--muted); line-height: 1.65; }
+    .section { padding: 44px 0; }
+    .panel { border-radius: 24px; border: 1px solid #ffffff20; padding: clamp(16px, 3.2vw, 30px); background: linear-gradient(155deg, #172338e8, #101623ed); box-shadow: 0 20px 50px #00000030; }
+    .panel p { margin: 0 0 20px; }
+    iframe { display: block; width: 100%; border: 0; border-radius: 13px; background: #171a22; }
+    .artist-player { height: 485px; }
+    .tracks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .track-label { margin: 0 0 13px; font-size: .9rem; font-weight: 700; letter-spacing: .01em; }
+    .track-player { height: 152px; }
+    .footnote { margin-top: 18px; font-size: .84rem; }
+    .footer { padding: 54px 0 32px; border-top: 1px solid #ffffff22; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; color: var(--muted); font-size: .88rem; }
+    .footer a { text-underline-offset: 4px; }
+    @media(max-width: 640px) { .shell { width: min(100% - 28px, 1120px); } .topbar { padding: 19px 0; } .hero { padding-top: 68px; } .tracks { grid-template-columns: 1fr; } .artist-player { height: 455px; } }
+    @media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .nav a, .button { transition: none; } }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="../" aria-label="Return to NeuroSyn Labs and DUHBLE">NeuroSyn Labs <span>/ DUHBLE</span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../">← DUHBLE home</a>
+      <a href="https://parkerpierce.info/" target="_blank" rel="noopener noreferrer">ParkerPierce.info ↗</a>
+    </nav>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="artist-heading">
+      <span class="eyebrow">Another project · The music</span>
+      <h1 id="artist-heading">PARKER<br><em>PIERCE.</em></h1>
+      <p class="lede">From building new foundations for computing to making music that refuses to live in one genre. Different medium, same restless curiosity. Listen here or explore the full artist site.</p>
+      <div class="cta">
+        <a class="button primary" href="#listen">Listen on this page ↓</a>
+        <a class="button" href="https://open.spotify.com/artist/3d7oUAqD0IDd3evYyKcHZP" target="_blank" rel="noopener noreferrer">Open Spotify ↗</a>
+        <a class="button" href="https://parkerpierce.info/" target="_blank" rel="noopener noreferrer">Artist website ↗</a>
+      </div>
+    </section>
+
+    <section class="section" id="listen" aria-labelledby="listen-heading">
+      <div class="section-head">
+        <h2 id="listen-heading">Listen on Spotify</h2>
+        <span class="muted">Official Parker Pierce artist player</span>
+      </div>
+      <div class="panel">
+        <p class="muted">Explore the top tracks directly in the Spotify player below. Spotify manages the track list, so it can change as new releases arrive.</p>
+        <iframe class="artist-player" title="Spotify player: Parker Pierce top tracks" src="https://open.spotify.com/embed/artist/3d7oUAqD0IDd3evYyKcHZP" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <p class="footnote muted">Playback, availability, and sign-in requirements are controlled by Spotify. <a href="https://open.spotify.com/artist/3d7oUAqD0IDd3evYyKcHZP" target="_blank" rel="noopener noreferrer">Listen directly on Spotify</a> if the player is unavailable.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="section-head">
+        <h2 id="featured-heading">Featured tracks</h2>
+        <span class="muted">A couple of places to start</span>
+      </div>
+      <div class="tracks">
+        <div class="panel">
+          <h3 class="track-label">SPARK · Live Studio Version</h3>
+          <iframe class="track-player" title="Spotify player: SPARK Live Studio Version by Parker Pierce" src="https://open.spotify.com/embed/track/1zv4x4EW0i9jm9CYRlYjTK" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="panel">
+          <h3 class="track-label">luv me 4 a min</h3>
+          <iframe class="track-player" title="Spotify player: luv me 4 a min by Parker Pierce" src="https://open.spotify.com/embed/track/5PXvMLvKEv0Vb93RmWESTn" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="shell footer">
+    <span>© 2026 NeuroSyn Labs · One builder, more than one project.</span>
+    <span><a href="../">DUHBLE</a> · <a href="https://parkerpierce.info/">Parker Pierce</a> · <a href="https://open.spotify.com/artist/3d7oUAqD0IDd3evYyKcHZP">Spotify</a></span>
+  </footer>
+</body>
+</html>
