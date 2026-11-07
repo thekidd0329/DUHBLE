@@ -1,5 +1,7 @@
 # DUHBLE
 
+**MY OTHER PROJECT · MUSIC:** [Parker Pierce](https://parkerpierce.info/) · [Listen on Spotify](https://open.spotify.com/artist/3d7oUAqD0IDd3evYyKcHZP) · [Music page](https://duh.bet/music/)
+
 **Dynamic Unification of Homeostatic and Brain-Like Engrams**
 
 DUHBLE is the working language/runtime identity for a developmental, stateful computing project centered on a simple principle:
